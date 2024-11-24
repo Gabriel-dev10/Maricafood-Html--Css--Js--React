@@ -138,8 +138,7 @@ const Login = () => {
         </BotãoOpção>
         <Rodapé>
           Ao continuar, você concorda em receber chamadas e mensagens SMS/RCS
-          ou pelo WhatsApp, inclusive automáticas, da Uber e suas afiliadas,
-          no número informado.
+          ou pelo WhatsApp, inclusive automáticas, no número informado.
         </Rodapé>
       </Formulario>
     </Container>
