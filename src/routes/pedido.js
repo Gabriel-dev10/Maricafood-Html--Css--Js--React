@@ -20,7 +20,7 @@ import imgCarrossel2 from '../assets/carrossel/img2.png';
 import imgCarrossel3 from '../assets/carrossel/img3.png';
 
 
-// Estilos Gerais
+
 export const ContainerPagina = styled.div`
     font-family: Arial, sans-serif;
     margin: 0;
@@ -36,7 +36,7 @@ export const TituloSecao = styled.h2`
     color: #9f000c;
 `;
 
-// Navbar
+
 export const ContainerNavbar = styled.nav`
     display: flex;
     justify-content: space-between;
@@ -93,7 +93,6 @@ export const ContainerBotoes = styled.div`
 `;
 
 
-// Seção de Produtos
 export const ContainerSecao = styled.div`
     display: flex;
     flex-wrap: wrap;
@@ -314,22 +313,22 @@ const Pedido = () => {
             <TituloSecao>Populares</TituloSecao>
             <ContainerSecao>
                 <CartaoProduto titulo="Hambúrguer Padrão" preco="19,90" distancia="1.2 km" tempoEntrega="15 min" imagem={imgComida1} />
-                <CartaoProduto titulo="Pizza Margherita" preco="39,90" distancia="2.5 km" tempoEntrega="25 min" imagem={imgComida2} />
-                <CartaoProduto titulo="Salada Vegana" preco="29,90" distancia="1.8 km" tempoEntrega="20 min" imagem={imgComida3} />
-                <CartaoProduto titulo="Bebida de Laranja" preco="4,90" distancia="3.2 km" tempoEntrega="10 min" imagem={imgComida4} />
+                <CartaoProduto titulo="Pizza" preco="39,90" distancia="2.5 km" tempoEntrega="25 min" imagem={imgComida2} />
+                <CartaoProduto titulo="Sanduiche" preco="29,90" distancia="1.8 km" tempoEntrega="20 min" imagem={imgComida3} />
+                <CartaoProduto titulo="Batata frita " preco="4,90" distancia="3.2 km" tempoEntrega="10 min" imagem={imgComida4} />
             </ContainerSecao>
 
             <TituloSecao>Promoções</TituloSecao>
             <ContainerSecao>
-                <CartaoProduto titulo="Combo Família" preco="59,90" distancia="2.0 km" tempoEntrega="30 min" imagem={imgPromocao1} />
+                <CartaoProduto titulo="Pizza Família" preco="59,90" distancia="2.0 km" tempoEntrega="30 min" imagem={imgPromocao1} />
             </ContainerSecao>
 
             <TituloSecao>Restaurantes</TituloSecao>
             <ContainerSecao>
-                <CartaoProduto titulo="Restaurante A" preco="Variado" distancia="1.2 km" tempoEntrega="20 min" imagem={imgRestaurante1} />
-                <CartaoProduto titulo="Restaurante B" preco="Variado" distancia="2.0 km" tempoEntrega="30 min" imagem={imgRestaurante2} />
-                <CartaoProduto titulo="Restaurante C" preco="Variado" distancia="3.0 km" tempoEntrega="25 min" imagem={imgRestaurante3} />
-                <CartaoProduto titulo="Restaurante D" preco="Variado" distancia="1.5 km" tempoEntrega="15 min" imagem={imgRestaurante4} />
+                <CartaoProduto titulo="Tal burguer" preco="Variado" distancia="1.2 km" tempoEntrega="20 min" imagem={imgRestaurante1} />
+                <CartaoProduto titulo="La pasta" preco="Variado" distancia="2.0 km" tempoEntrega="30 min" imagem={imgRestaurante2} />
+                <CartaoProduto titulo="Naturals" preco="Variado" distancia="3.0 km" tempoEntrega="25 min" imagem={imgRestaurante3} />
+                <CartaoProduto titulo="Chef kiss" preco="Variado" distancia="1.5 km" tempoEntrega="15 min" imagem={imgRestaurante4} />
             </ContainerSecao>
         </ContainerPagina>
     );

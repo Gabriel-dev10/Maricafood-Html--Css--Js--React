@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { FaTrashAlt, FaPlus} from "react-icons/fa";
-
-import {useNavigate} from 'react-router-dom';
+import { FaTrashAlt, FaPlus } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const Container = styled.div`
   width: 100%;
@@ -14,7 +13,7 @@ const Container = styled.div`
   color: #000;
 `;
 
-const Header = styled.div`
+const Cabeçalho = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,11 +32,11 @@ const Header = styled.div`
   }
 `;
 
-const Section = styled.section`
+const Secao = styled.section`
   margin-bottom: 20px;
 `;
 
-const RestaurantInfo = styled.div`
+const InformacoesRestaurante = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -64,7 +63,7 @@ const Item = styled.div`
   border-radius: 10px;
 `;
 
-const ItemDetails = styled.div`
+const DetalhesItem = styled.div`
   flex: 1;
 
   h3 {
@@ -85,7 +84,7 @@ const ItemDetails = styled.div`
   }
 `;
 
-const QuantityControl = styled.div`
+const ControleQuantidade = styled.div`
   display: flex;
   align-items: center;
 
@@ -107,7 +106,7 @@ const QuantityControl = styled.div`
   }
 `;
 
-const Summary = styled.div`
+const Resumo = styled.div`
   margin-top: 20px;
 
   h3 {
@@ -146,7 +145,7 @@ const Total = styled.div`
   }
 `;
 
-const ContinueButton = styled.button`
+const BotaoContinuar = styled.button`
   width: 100%;
   padding: 15px;
   margin-top: 20px;
@@ -164,132 +163,132 @@ const ContinueButton = styled.button`
 
 
 const FinalizarPedido = () => (
-    <ContainerFinalizarPedido>
-        <TituloFinalizarPedido>Carrinho</TituloFinalizarPedido>
+  <ContainerFinalizarPedido>
+    <TituloFinalizarPedido>Carrinho</TituloFinalizarPedido>
 
-        <SecaoEndereco>
-            <h3>Endereço</h3>
-            <BoxEndereco>
-                <TextoEndereco>Seu Endereço</TextoEndereco>
-                <span>Maricá - RJ</span>
-                <BotaoFazerPedido>Escolher Outro</BotaoFazerPedido>
-            </BoxEndereco>
-        </SecaoEndereco>
+    <SecaoEndereco>
+      <h3>Endereço</h3>
+      <BoxEndereco>
+        <TextoEndereco>Seu Endereço</TextoEndereco>
+        <span>Maricá - RJ</span>
+        <BotaoFazerPedido>Escolher Outro</BotaoFazerPedido>
+      </BoxEndereco>
+    </SecaoEndereco>
 
-        <SecaoPagamento>
-            <OpcaoPagamento>
-                <IconePagamento /> 
-                <span>PIX</span>
-            </OpcaoPagamento>
-            <OpcaoPagamento>
-                <IconePagamento />
-                <span>Crédito e Débito</span>
-            </OpcaoPagamento>
-            <OpcaoPagamento>
-                <IconePagamento /> 
-                <span>Moeda Social Mumbuca</span>
-            </OpcaoPagamento>
-        </SecaoPagamento>
-    </ContainerFinalizarPedido>
+    <SecaoPagamento>
+      <OpcaoPagamento>
+        <IconePagamento />
+        <span>PIX</span>
+      </OpcaoPagamento>
+      <OpcaoPagamento>
+        <IconePagamento />
+        <span>Crédito e Débito</span>
+      </OpcaoPagamento>
+      <OpcaoPagamento>
+        <IconePagamento />
+        <span>Moeda Social Mumbuca</span>
+      </OpcaoPagamento>
+    </SecaoPagamento>
+  </ContainerFinalizarPedido>
 );
 
 
 
 export const ContainerFinalizarPedido = styled.div`
-    padding: 20px 4%;
-    background-color: #fff;
+  padding: 20px 4%;
+  background-color: #fff;
 `;
 
 export const BotaoFazerPedido = styled.button`
-    margin-top: 2px;
-    padding: 10px 20px;
-    background-color: #ffb400;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    &:hover {
-        background-color: #ff6347;
-    }
+  margin-top: 2px;
+  padding: 10px 20px;
+  background-color: #ffb400;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  &:hover {
+    background-color: #ff6347;
+  }
 `;
 
 export const TituloFinalizarPedido = styled.h3`
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
 `;
 
 export const SecaoEndereco = styled.div`
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 `;
 
 export const BoxEndereco = styled.div`
-    background-color: #f9f9f9;
-    padding: 2px;
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background-color: #f9f9f9;
+  padding: 2px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 export const TextoEndereco = styled.p`
-    font-size: 16px;
-    color: #777;
+  font-size: 16px;
+  color: #777;
 `;
 
 export const SecaoPagamento = styled.div`
-    display: flex;
-    gap: 15px;
+  display: flex;
+  gap: 15px;
 `;
 
 export const OpcaoPagamento = styled.div`
-    flex: 1;
-    text-align: center;
-    padding: 2px;
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    cursor: pointer;
-    &:hover {
-        background-color: #ffcccb;
-    }
+  flex: 1;
+  text-align: center;
+  padding: 2px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  cursor: pointer;
+  &:hover {
+    background-color: #ffcccb;
+  }
 `;
 
 export const IconePagamento = styled.div`
-    font-size: 24px;
-    color: #ff4500;
-    margin-bottom: 5px;
+  font-size: 24px;
+  color: #ff4500;
+  margin-bottom: 5px;
 `;
 
 
 
 
 const Carrinho = () => {
-  const navigate = useNavigate();
+  const navegar = useNavigate();
 
   const Inicio = () => {
-    navigate('/pedido'); 
+    navegar("/pedido");
   };
 
   return (
     <Container>
-        <FinalizarPedido />
-      <Header>
-        <h1>opção</h1>
+      <FinalizarPedido />
+      <Cabeçalho>
+        <h1>Opção</h1>
         <a>Limpar</a>
-      </Header>
-      <Section>
-        <RestaurantInfo>
+      </Cabeçalho>
+      <Secao>
+        <InformacoesRestaurante>
           <h2>Hambúrguer Padrão</h2>
           <a>Adicionar mais itens</a>
-        </RestaurantInfo>
+        </InformacoesRestaurante>
         <Item>
-          <ItemDetails>
+          <DetalhesItem>
             <h3>Hambúrguer Padrão</h3>
             <p>Dois hambúrgueres (100% carne bovina)</p>
             <strong>R$ 25,90</strong>
-          </ItemDetails>
-          <QuantityControl>
+          </DetalhesItem>
+          <ControleQuantidade>
             <button>
               <FaTrashAlt />
             </button>
@@ -297,14 +296,14 @@ const Carrinho = () => {
             <button>
               <FaPlus />
             </button>
-          </QuantityControl>
+          </ControleQuantidade>
         </Item>
         <a style={{ color: "red", fontSize: "0.9rem" }}>
           Adicionar mais itens
         </a>
-      </Section>
-      <Section>
-        <Summary>
+      </Secao>
+      <Secao>
+        <Resumo>
           <h3>Resumo de valores</h3>
           <div>
             <span>Subtotal</span>
@@ -322,9 +321,9 @@ const Carrinho = () => {
             <h2>Total</h2>
             <strong>R$ 27,89</strong>
           </Total>
-        </Summary>
-      </Section>
-      <ContinueButton onClick={Inicio}>Finalizar Pagamento</ContinueButton>
+        </Resumo>
+      </Secao>
+      <BotaoContinuar onClick={Inicio}>Finalizar Pagamento</BotaoContinuar>
     </Container>
   );
 };

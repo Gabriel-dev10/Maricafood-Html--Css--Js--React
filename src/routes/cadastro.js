@@ -60,7 +60,7 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
-const Divider = styled.div`
+const Divisao = styled.div`
   display: flex;
   align-items: center;
   margin: 20px 0;
@@ -116,11 +116,11 @@ const Cadastro = () => {
         <Title>Confirme sua senha</Title>
         <Input type="text" placeholder="Repita sua senha" />
         <Button onClick={Inicio}>Continuar</Button>
-        <Divider>
+        <Divisao>
           <span></span>
           <p>ou</p>
           <span></span>
-        </Divider>
+        </Divisao>
         <OptionButton>
           <FaGoogle /> Continuar com o Google
         </OptionButton>

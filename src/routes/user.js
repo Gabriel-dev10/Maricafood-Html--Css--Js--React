@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { FaBell, FaCreditCard, FaComments, FaHeart, FaUsers } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 
-const Contenedor = styled.div`
+const Container = styled.div`
   font-family: Arial, sans-serif;
   padding: 20px;
   background-color: #ffb400;
@@ -102,7 +102,7 @@ const Usuario = () => {
   };
 
   return (
-    <Contenedor>
+    <Container>
       <Cabecalho>
         <InformacaoPerfil>
           <ImagemPerfil onClick={voltarParaInicio}>🎉</ImagemPerfil>
@@ -150,7 +150,7 @@ const Usuario = () => {
           </TextoMenu>
         </ItemMenu>
       </Menu>
-    </Contenedor>
+    </Container>
   );
 };
 

@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { FaGoogle, FaApple, FaQrcode } from "react-icons/fa";
-
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 const Container = styled.div`
   display: flex;
@@ -13,7 +12,7 @@ const Container = styled.div`
   font-family: Arial, sans-serif;
 `;
 
-const Header = styled.div`
+const Cabeçalho = styled.div`
   width: 100%;
   background-color: #ffb400;
   padding: 30px;
@@ -26,20 +25,20 @@ const Header = styled.div`
   }
 `;
 
-const Form = styled.div`
+const Formulario = styled.div`
   width: 100%;
   max-width: 400px;
   padding: 20px;
   text-align: center;
 `;
 
-const Title = styled.h2`
+const Titulo = styled.h2`
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 20px;
 `;
 
-const Input = styled.input`
+const CampoEntrada = styled.input`
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
@@ -48,7 +47,7 @@ const Input = styled.input`
   border-radius: 5px;
 `;
 
-const Button = styled.button`
+const Botão = styled.button`
   width: 100%;
   padding: 10px;
   margin-bottom: 20px;
@@ -60,7 +59,7 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
-const Divider = styled.div`
+const Divisor = styled.div`
   display: flex;
   align-items: center;
   margin: 20px 0;
@@ -78,7 +77,7 @@ const Divider = styled.div`
   }
 `;
 
-const OptionButton = styled(Button)`
+const BotãoOpção = styled(Botão)`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -94,7 +93,7 @@ const OptionButton = styled(Button)`
   }
 `;
 
-const Footer = styled.p`
+const Rodapé = styled.p`
   font-size: 0.8rem;
   color: #666;
   text-align: center;
@@ -103,47 +102,46 @@ const Footer = styled.p`
 `;
 
 const Login = () => {
-  
-  const navigate = useNavigate();
+  const navegar = useNavigate();
 
-  const Inicio = () => {
-    navigate('/'); 
+  const voltarParaInicio = () => {
+    navegar("/"); 
   };
 
   return (
     <Container>
-      <Header>
+      <Cabeçalho>
         <h1>MaricáFOOD</h1>
-      </Header>
-      <Form>
-        <Title>Qual é o seu número de telefone ou e-mail?</Title>
-        <Input type="text" placeholder="Informar telefone ou e-mail" />
-        <Button onClick={Inicio}>Continuar</Button>
-        <Divider>
+      </Cabeçalho>
+      <Formulario>
+        <Titulo>Acessar com número de telefone</Titulo>
+        <CampoEntrada type="text" placeholder="Digite seu telefone" />
+        <Botão onClick={voltarParaInicio}>Continuar</Botão>
+        <Divisor>
           <span></span>
           <p>ou</p>
           <span></span>
-        </Divider>
-        <OptionButton>
+        </Divisor>
+        <BotãoOpção>
           <FaGoogle /> Continuar com o Google
-        </OptionButton>
-        <OptionButton>
+        </BotãoOpção>
+        <BotãoOpção>
           <FaApple /> Continuar com a Apple
-        </OptionButton>
-        <Divider>
+        </BotãoOpção>
+        <Divisor>
           <span></span>
           <p>ou</p>
           <span></span>
-        </Divider>
-        <OptionButton>
-          <FaQrcode /> Faça login com o código QR
-        </OptionButton>
-        <Footer>
+        </Divisor>
+        <BotãoOpção>
+          <FaQrcode /> Fazer login com o código QR
+        </BotãoOpção>
+        <Rodapé>
           Ao continuar, você concorda em receber chamadas e mensagens SMS/RCS
-          ou pelo WhatsApp, inclusive automáticas, da Uber e de suas afiliadas,
+          ou pelo WhatsApp, inclusive automáticas, da Uber e suas afiliadas,
           no número informado.
-        </Footer>
-      </Form>
+        </Rodapé>
+      </Formulario>
     </Container>
   );
 };
