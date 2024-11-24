@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { FaShoppingCart, FaRegHeart, FaUserAlt } from 'react-icons/fa';
-
+import { IoSearch } from 'react-icons/io5';
 import { useNavigate} from 'react-router-dom';
 
 
@@ -44,6 +44,10 @@ export const ContainerNavbar = styled.nav`
     padding: 15px 30px;
     background-color: #ffb400;
     color: white;
+      @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 1rem;
+      }
 `;
 
 const Logo = styled.div`
@@ -51,6 +55,9 @@ const Logo = styled.div`
   flex-direction: column;
   text-align: center;
   font-size: 1.8rem;
+  @media (max-width: 768px) {
+  font-size: 1.5rem;
+  }
 `;
 
 const TextoLogo = styled.span`
@@ -65,12 +72,17 @@ const TextoFood = styled.span`
 export const LinksNavegacao = styled.div`
     display: flex;
     gap: 2vw;
+      @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 1rem;
+      }
 `;
 
 export const LinkNavegacao = styled.a`
   color: black;
   text-decoration: none;
   font-size: 1.2rem;
+  cursor: pointer;
 `;
 
 export const ContainerPesquisa = styled.div`
@@ -79,11 +91,22 @@ export const ContainerPesquisa = styled.div`
   align-items: center;
 `;
 
+
+const IconePesquisa = styled(IoSearch)`
+  position: absolute;
+  right: 1rem;
+  font-size: 1.5rem;
+  color: #aaa;
+`;
+
 export const CampoPesquisa = styled.input`
   padding: 0.75rem 2.5rem 0.75rem 1rem;
   font-size: 1rem;
   border-radius: 20px;
   border: 1px solid #ddd;
+  @media (max-width: 768px) {
+  width: 100%;
+  }
 `;
 
 
@@ -281,6 +304,10 @@ const Pedido = () => {
         navigate('/carrinho');
     };
 
+    const Inicio = () => {
+        navigate('/'); 
+    };
+
     return (
         <ContainerPagina>
             <ContainerNavbar>
@@ -289,13 +316,16 @@ const Pedido = () => {
                     <TextoFood>FOOD</TextoFood>
                 </Logo>
                 <LinksNavegacao>
-                    <LinkNavegacao href="#sobre">Início</LinkNavegacao>
-                    <LinkNavegacao href="#restaurantes">Restaurantes</LinkNavegacao>
-                    <LinkNavegacao href="#mercados">Mercados</LinkNavegacao>
-                    <LinkNavegacao href="#lojas">Lojas</LinkNavegacao>
+                    <LinkNavegacao onClick={Inicio}>Início</LinkNavegacao>
+                    <LinkNavegacao >Restaurantes</LinkNavegacao>
+                    <LinkNavegacao >Mercados</LinkNavegacao>
+                    <LinkNavegacao >Lojas</LinkNavegacao>
                 </LinksNavegacao>
                 <ContainerPesquisa>
                     <CampoPesquisa type="text" placeholder="Buscar..." />
+                    <IconePesquisa>
+                        <IoSearch /> 
+                    </IconePesquisa>
                 </ContainerPesquisa>
                 <ContainerBotoes>
                     <BotaoIcone onClick={navegarParaCarrinho}>

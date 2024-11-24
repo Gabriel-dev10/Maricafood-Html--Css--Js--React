@@ -34,6 +34,10 @@ const ContainerNavbar = styled.div`
   position: sticky;
   top: 0;
   z-index: 3;
+  @media (max-width: 768px) {
+  flex-direction: column;
+  gap: 1rem;
+  }
 `;
 
 const Logo = styled.div`
@@ -41,6 +45,9 @@ const Logo = styled.div`
   flex-direction: column;
   text-align: center;
   font-size: 1.8rem;
+  @media (max-width: 768px) {
+  font-size: 1.5rem;
+  }
 `;
 
 const TextoLogo = styled.span`
@@ -55,6 +62,10 @@ const TextoFood = styled.span`
 const LinksNavegacao = styled.div`
   display: flex;
   gap: 2vw;
+  @media (max-width: 768px) {
+  flex-direction: column;
+  gap: 1rem;
+  }
 `;
 
 const LinkNavegacao = styled.a`
@@ -74,6 +85,9 @@ const CaixaPesquisa = styled.input`
   font-size: 1rem;
   border-radius: 20px;
   border: 1px solid #ddd;
+  @media (max-width: 768px) {
+  width: 100%;
+  }
 `;
 
 const IconePesquisa = styled(IoSearch)`
@@ -120,7 +134,10 @@ const ContentContainer = styled.div`
   margin-top: 2rem;
   gap: 2rem;
   padding: 1rem;
-
+  @media (max-width: 768px) {
+  grid-template-columns: 1fr;
+  padding: 0.5rem;
+  }
 `;
 
 const SecaoTexto = styled.div`
@@ -134,12 +151,18 @@ const SecaoTexto = styled.div`
 const TextoBoasVindas = styled.p`
   font-size: 3.5rem;
   margin: 0;
+  @media (max-width: 768px) {
+  font-size: 2rem;
+  }
 `;
 
 const TextoMaricaFood = styled.div`
   font-size: 5rem;
   font-weight: bold;
   color: black;
+    @media (max-width: 768px) {
+    font-size: 3rem;
+  } 
 `;
 
 const TextoDestaque = styled.span`
@@ -182,6 +205,9 @@ const FundoAmarelo = styled.div`
   border-top-left-radius: 30rem;
   border-bottom-left-radius: 30rem;
   z-index: 1;
+    @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const ContainerImagem = styled.div`
@@ -196,6 +222,9 @@ const ContainerImagem = styled.div`
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const SecaoMeio = styled.div`
@@ -205,6 +234,10 @@ const SecaoMeio = styled.div`
   width: 100%;
   max-width: 1500px;
   padding: 2rem 0;
+    @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
 `;
 
 const Titulo = styled.h1`
@@ -248,6 +281,10 @@ const SecaoMeioCard = styled.div`
   padding: 2rem;
   max-width: 1500px;
   width: 100%;
+    @media (max-width: 768px) {
+    grid-template-columns: 1fr; /* Alteração para 1 coluna em telas menores */
+    grid-template-rows: auto;  /* Adapta as linhas automaticamente */
+  }
 `;
 
 const Card = styled.div`
@@ -264,6 +301,10 @@ const Card = styled.div`
 
   &:hover {
     transform: scale(1.05);
+  }
+
+    @media (max-width: 768px) {
+    padding: 1rem;
   }
 `;
 
@@ -323,7 +364,10 @@ const SecaoParceiro = styled.section`
   height: 40rem;
   width: 90rem;
   padding: 10rem;
-  background:#9f000c; 
+  background:#9f000c;
+    @media (max-width: 768px) {
+    padding: 2rem;
+  }
 `;
 
 const TextoParceiro = styled.h1`
@@ -331,6 +375,9 @@ const TextoParceiro = styled.h1`
   font-weight: bold;
   text-align: center;
   color: white;
+    @media (max-width: 768px) {
+    font-size: 2rem;
+  }
 `;
 
 const PParceiro = styled.p`
@@ -469,7 +516,7 @@ const App = () => {
           </CardContent>
           <BotaoCadastrar>Cadastrar</BotaoCadastrar>
         </Card>
-        <Card>
+        <Card>  
           <CardContent>
             <TextContainer>
               <Titulocard>Mercado</Titulocard>
