@@ -130,7 +130,7 @@ const ContentContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 100%;
-  max-width: 1470px;
+  max-width: 1500px;
   margin-top: 2rem;
   gap: 2rem;
   padding: 1rem;
@@ -211,7 +211,8 @@ const BotaoAcao = styled.button`
 // `;
 
 const ContainerImagem = styled.div`
-  @media (max-width: 768px) {
+ overflow-x: hidden; 
+ @media (max-width: 768px) {
     display: none;
   }
 `;
@@ -442,8 +443,8 @@ const App = () => {
             src={LogoImage}
             alt="Logo"
             style={{
-              width: '1200px', 
-              maxWidth: '1000px', 
+              width: '700px', 
+              maxWidth: '800px', 
             }}
           />
         </ContainerImagem>
