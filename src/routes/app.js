@@ -10,7 +10,7 @@ import { FaMoneyBills, FaMoneyBillTrendUp } from "react-icons/fa6";
 import { useNavigate } from 'react-router-dom';
 
 
-import LogoImage from '../assets/imgs.png';
+import LogoImage from '../assets/1.png';
 import mark from '../assets/mark.png';
 import moto from '../assets/moto.png';
 import cesta from '../assets/cesta.png';
@@ -130,7 +130,7 @@ const ContentContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 100%;
-  max-width: 1500px;
+  max-width: 1470px;
   margin-top: 2rem;
   gap: 2rem;
   padding: 1rem;
@@ -184,50 +184,35 @@ const BotaoAcao = styled.button`
   padding: 0.75rem 2rem;
   font-size: 1rem;
   color: white;
-  background-color: ${props => (props.primary ? '#ffb400' : 'black')};
+  background-color:#ffb400;
   border: none;
   border-radius: 20px;
   cursor: pointer;
   &:hover {
-    background-color: ${props => (props.primary ? '#e0a800' : '#333')};
+    background-color: black;
   }
 `;
 
-const FundoAmarelo = styled.div`
-  position: relative;
-  top: 2rem;
-  max-height:500px;
-  max-width:800px;
-  right: 0;
-  width: 50vw;
-  height: 65vh;
-  background-color: #ffb400;
-  border-top-left-radius: 30rem;
-  border-bottom-left-radius: 30rem;
-  z-index: 1;
-    @media (max-width: 768px) {
-    display: none;
-  }
-`;
+// const FundoAmarelo = styled.div`
+//   position: relative;
+//   top: 2rem;
+//   max-height:500px;
+//   max-width:800px;
+//   right: 0;
+//   width: 50vw;
+//   height: 65vh;
+//   background-color: #ffb400;
+//   border-top-left-radius: 30rem;
+//   border-bottom-left-radius: 30rem;
+//   z-index: 1;
+//     @media (max-width: 768px) {
+//     display: none;
+//   }
+// `;
 
 const ContainerImagem = styled.div`
-  position: absolute;
-  top: 198px;
-  left: 45%; 
-  width: 100%;
-  max-width: 800px;
-  height: auto;
-  z-index: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
   @media (max-width: 768px) {
     display: none;
-  }
-  @media (max-width: 1366px) {
-    left: 60%;
-    max-width: 310px;
   }
 `;
 
@@ -286,8 +271,8 @@ const SecaoMeioCard = styled.div`
   max-width: 1500px;
   width: 100%;
     @media (max-width: 768px) {
-    grid-template-columns: 1fr; /* Alteração para 1 coluna em telas menores */
-    grid-template-rows: auto;  /* Adapta as linhas automaticamente */
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
   }
 `;
 
@@ -425,7 +410,7 @@ const App = () => {
         <LinksNavegacao>
           <LinkNavegacao href="#sobre">Sobre</LinkNavegacao>
           <LinkNavegacao href="#servicos">Serviços</LinkNavegacao>
-          <LinkNavegacao href="#contato">Contato</LinkNavegacao>
+          <LinkNavegacao href="#vantagens">Vantagens</LinkNavegacao>
         </LinksNavegacao>
         <ContainerCaixaPesquisa>
           <CaixaPesquisa type="text" placeholder="Pesquisar..." />
@@ -434,8 +419,8 @@ const App = () => {
         <ContainerBotoes>
           <BotaoCriarConta onClick={Vaipracad}>Criar Conta</BotaoCriarConta>
           <BotaoEntrar onClick={Vaipralogin}>Entrar</BotaoEntrar>
-        </ContainerBotoes>
-      </ContainerNavbar>
+        </ContainerBotoes >
+      </ContainerNavbar >
 
 
       <ContentContainer>
@@ -447,26 +432,24 @@ const App = () => {
           <TextoSub>Uma nova experiência e inovação na área de delivery</TextoSub>
           <TextoSub>Visando somente sua cidade!</TextoSub>
           <BotoesAcoes>
-            <BotaoAcao primary onClick={use}>Pedir Agora</BotaoAcao>
+            <BotaoAcao onClick={use}>Pedir Agora</BotaoAcao>
             <BotaoAcao>Saiba Mais</BotaoAcao>
           </BotoesAcoes>
         </SecaoTexto>
-        <FundoAmarelo />
+        {/* <FundoAmarelo /> */}
         <ContainerImagem>
             <img
             src={LogoImage}
             alt="Logo"
             style={{
-              width: '100%', 
-              height: 'auto',
-              objectFit: 'contain',
-              maxWidth: '400px', 
+              width: '1200px', 
+              maxWidth: '1000px', 
             }}
           />
         </ContainerImagem>
       </ContentContainer>
 
-      <Titulo>Por que escolher o MaricáFOOD?</Titulo>
+      <Titulo id='servicos'>Por que escolher o MaricáFOOD?</Titulo>
 
       <SecaoMeio>
         <Box>
@@ -506,7 +489,7 @@ const App = () => {
       <Titulo>Seja nosso parceiro</Titulo>
 
 
-      <SecaoMeioCard>
+      <SecaoMeioCard >
         <Card>
           <CardContent>
             <TextContainer>
@@ -549,7 +532,7 @@ const App = () => {
       </SecaoMeioCard>
 
 
-      <SecaoParceiro>
+      <SecaoParceiro id='vantagens'>
         <TextoParceiro>
           Vantagens de ser <PalavraMarica>parceiro</PalavraMarica> do Maricá
           <PalavraFood>FOOD</PalavraFood>

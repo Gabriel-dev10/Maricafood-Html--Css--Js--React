@@ -317,9 +317,9 @@ const Pedido = () => {
                 </Logo>
                 <LinksNavegacao>
                     <LinkNavegacao onClick={Inicio}>Início</LinkNavegacao>
-                    <LinkNavegacao >Restaurantes</LinkNavegacao>
-                    <LinkNavegacao >Mercados</LinkNavegacao>
-                    <LinkNavegacao >Lojas</LinkNavegacao>
+                    <LinkNavegacao  href="#populares">Populares</LinkNavegacao>
+                    <LinkNavegacao  href="#promocao">Promoção</LinkNavegacao>
+                    <LinkNavegacao  href="#restaurantes">Restaurantes</LinkNavegacao>
                 </LinksNavegacao>
                 <ContainerPesquisa>
                     <CampoPesquisa type="text" placeholder="Buscar..." />
@@ -340,7 +340,7 @@ const Pedido = () => {
                 </ContainerBotoes>
             </ContainerNavbar>
             <Carrossel />
-            <TituloSecao>Populares</TituloSecao>
+            <TituloSecao id='populares'>Populares</TituloSecao>
             <ContainerSecao>
                 <CartaoProduto titulo="Hambúrguer Padrão" preco="19,90" distancia="1.2 km" tempoEntrega="15 min" imagem={imgComida1} />
                 <CartaoProduto titulo="Pizza" preco="39,90" distancia="2.5 km" tempoEntrega="25 min" imagem={imgComida2} />
@@ -348,12 +348,12 @@ const Pedido = () => {
                 <CartaoProduto titulo="Batata frita " preco="4,90" distancia="3.2 km" tempoEntrega="10 min" imagem={imgComida4} />
             </ContainerSecao>
 
-            <TituloSecao>Promoções</TituloSecao>
+            <TituloSecao id='promocao'>Promoções</TituloSecao>
             <ContainerSecao>
                 <CartaoProduto titulo="Pizza Família" preco="59,90" distancia="2.0 km" tempoEntrega="30 min" imagem={imgPromocao1} />
             </ContainerSecao>
 
-            <TituloSecao>Restaurantes</TituloSecao>
+            <TituloSecao id='restaurantes'>Restaurantes</TituloSecao>
             <ContainerSecao>
                 <CartaoProduto titulo="Tal burguer" preco="Variado" distancia="1.2 km" tempoEntrega="20 min" imagem={imgRestaurante1} />
                 <CartaoProduto titulo="La pasta" preco="Variado" distancia="2.0 km" tempoEntrega="30 min" imagem={imgRestaurante2} />
