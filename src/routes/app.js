@@ -211,7 +211,8 @@ const BotaoAcao = styled.button`
 // `;
 
 const ContainerImagem = styled.div`
- overflow-x: hidden; 
+ overflow-x: hidden;
+ max-width: 1400px;
  @media (max-width: 768px) {
     display: none;
   }

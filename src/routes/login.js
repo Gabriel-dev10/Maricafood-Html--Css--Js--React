@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { FaGoogle, FaApple, FaQrcode } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const Container = styled.div`
   display: flex;
@@ -103,9 +104,16 @@ const Rodapé = styled.p`
 
 const Login = () => {
   const navegar = useNavigate();
-
+  const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
   const voltarParaInicio = () => {
     navegar("/"); 
+  };
+
+  const  TratarLogin= () => {
+    console.log("Email:", email);
+    console.log("Senha:", senha);
+    alert("Login clicado! (Integração futura com o backend)");
   };
 
   return (
@@ -113,29 +121,52 @@ const Login = () => {
       <Cabeçalho>
         <h1>MaricáFOOD</h1>
       </Cabeçalho>
+
       <Formulario>
-        <Titulo>Acessar com número de telefone</Titulo>
-        <CampoEntrada type="text" placeholder="Digite seu telefone" />
+        <Titulo>Acessar sua conta</Titulo>
+        
+        <CampoEntrada
+          type="text"
+          placeholder="Digite seu email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        
+        <CampoEntrada
+          type="password"
+          placeholder="Digite sua senha"
+          value={senha}
+          onChange={(e) => setSenha(e.target.value)}
+        />
+        
+        <Botão onClick={TratarLogin}>BOTAO TESTE LOGIN</Botão>
+        {/* so para manter a funcionabilidade do site deixei o botao voltarparainicio */}
         <Botão onClick={voltarParaInicio}>Continuar</Botão>
+
         <Divisor>
           <span></span>
           <p>ou</p>
           <span></span>
         </Divisor>
+
         <BotãoOpção>
           <FaGoogle /> Continuar com o Google
         </BotãoOpção>
+
         <BotãoOpção>
           <FaApple /> Continuar com a Apple
         </BotãoOpção>
+
         <Divisor>
           <span></span>
           <p>ou</p>
           <span></span>
         </Divisor>
+
         <BotãoOpção>
-          <FaQrcode /> Fazer login com o código QR
+          <FaQrcode /> Fazer login com o código QR / Para afiliados
         </BotãoOpção>
+
         <Rodapé>
           Ao continuar, você concorda em receber chamadas e mensagens SMS/RCS
           ou pelo WhatsApp, inclusive automáticas, no número informado.
@@ -144,5 +175,5 @@ const Login = () => {
     </Container>
   );
 };
-
 export default Login;
+  
