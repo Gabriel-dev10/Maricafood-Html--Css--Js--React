@@ -342,7 +342,7 @@ const Pedido = () => {
             <Carrossel />
             <TituloSecao id='populares'>Populares</TituloSecao>
             <ContainerSecao>
-                <CartaoProduto titulo="Hambúrguer Padrão" preco="19,90" distancia="1.2 km" tempoEntrega="15 min" imagem={imgComida1} />
+                <CartaoProduto titulo="Hambúrguer Padrão" preco="25,90" distancia="1.2 km" tempoEntrega="15 min" imagem={imgComida1} />
                 <CartaoProduto titulo="Pizza" preco="39,90" distancia="2.5 km" tempoEntrega="25 min" imagem={imgComida2} />
                 <CartaoProduto titulo="Sanduiche" preco="29,90" distancia="1.8 km" tempoEntrega="20 min" imagem={imgComida3} />
                 <CartaoProduto titulo="Batata frita " preco="4,90" distancia="3.2 km" tempoEntrega="10 min" imagem={imgComida4} />
