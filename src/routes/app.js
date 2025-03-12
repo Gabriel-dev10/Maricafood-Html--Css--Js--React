@@ -30,7 +30,7 @@ const ContainerNavbar = styled.div`
   align-items: center;
   width: 100%;
   padding: 1rem 4vw;  
-  background-color: white;
+  background-color: #ffb400;
   position: sticky;
   top: 0;
   z-index: 3;
@@ -55,7 +55,7 @@ const TextoLogo = styled.span`
 `;
 
 const TextoFood = styled.span`
-  color: #ffb400;
+  color:black;
   font-size: 1.6rem;
 `;
 
@@ -109,22 +109,17 @@ const Botao = styled.button`
   cursor: pointer;
 `;
 
-const BotaoCriarConta = styled(Botao)`
+const BotaoBranco = styled(Botao)`
   background-color: white;
   color: black;
-  border: 2px solid black;
+  border: none;
   &:hover {
-    background-color: #f0f0f0;
+    background-color: rgb(207, 207, 207);
   }
 `;
 
-const BotaoEntrar = styled(Botao)`
-  background-color: black;
-  color: white;
-  &:hover {
-    background-color: #333;
-  }
-`;
+const BotaoCriarConta = styled(BotaoBranco)``;
+const BotaoEntrar = styled(BotaoBranco)``;
 
 const ContentContainer = styled.div`
   display: grid;
@@ -189,7 +184,7 @@ const BotaoAcao = styled.button`
   border-radius: 20px;
   cursor: pointer;
   &:hover {
-    background-color: black;
+    background-color: rgb(141, 140, 140);
   }
 `;
 
@@ -341,7 +336,7 @@ const BotaoCadastrar = styled.button`
   margin-top: 1.5rem;
 
   &:hover {
-    background-color: #e0a800;
+    background-color: rgb(141, 140, 140);
   }
 `;
 
