@@ -52,6 +52,7 @@ const Logo = styled.div`
 
 const TextoLogo = styled.span`
   font-weight: 700;
+  color:white;
 `;
 
 const TextoFood = styled.span`

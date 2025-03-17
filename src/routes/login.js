@@ -94,13 +94,13 @@ const BotãoOpção = styled(Botão)`
   }
 `;
 
-const Rodapé = styled.p`
-  font-size: 0.8rem;
-  color: #666;
-  text-align: center;
-  line-height: 1.5;
-  margin-top: 20px;
-`;
+// const Rodapé = styled.p`
+//   font-size: 0.8rem;
+//   color: #666;
+//   text-align: center;
+//   line-height: 1.5;
+//   margin-top: 20px;
+// `;
 
 const Login = () => {
   const navegar = useNavigate();
@@ -167,10 +167,10 @@ const Login = () => {
           <FaQrcode /> Fazer login com o código QR / Para afiliados
         </BotãoOpção>
 
-        <Rodapé>
+        {/*<Rodapé>
           Ao continuar, você concorda em receber chamadas e mensagens SMS/RCS
           ou pelo WhatsApp, inclusive automáticas, no número informado.
-        </Rodapé>
+        </Rodapé>*/}
       </Formulario>
     </Container>
   );
