@@ -176,6 +176,20 @@ export const Preco = styled.p`
     font-weight: bold;
 `;
 
+export const BotaoCarrinho1 = styled.button`
+    padding: 10px 15px;
+    margin-top: 10px;
+    background-color: #ffb400;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    &:hover {
+        background-color: #ff6347;
+    }
+`;
+
 export const BotaoCarrinho = styled.button`
     padding: 10px 15px;
     margin-top: 10px;
@@ -237,20 +251,6 @@ const BotaoControle = styled.button`
   ${(props) => (props.direcao === "anterior" ? "left: 10px;" : "right: 10px;")}
 `;
 
-
-const CartaoProduto = ({ titulo, preco, distancia, tempoEntrega, imagem }) => (
-    <ContainerCartao>
-        <IconeCurtir>♡</IconeCurtir>
-        <ImagemProduto src={imagem} alt={titulo} />
-        <TituloProduto>{titulo}</TituloProduto>
-        <DetalhesProduto>{distancia} • {tempoEntrega}</DetalhesProduto>
-        <ContainerPreco>
-            <Preco>R$ {preco}</Preco>
-            <BotaoCarrinho>Adicionar ao carrinho</BotaoCarrinho>
-        </ContainerPreco>
-    </ContainerCartao>
-);
-
 const Carrossel = () => {
     let slideIndex = 0;
 
@@ -306,7 +306,30 @@ const Pedido = () => {
 
     const Inicio = () => {
         navigate('/'); 
-    };
+    }
+
+    const navegarParaRestaurante = () => {
+        navigate('/restaurante')
+        window.scrollTo(0, 0); 
+      };
+      const CartaoProduto = ({ titulo, preco, distancia, tempoEntrega, imagem, mostrarRestCheffKiss,mostrarBotao}) => (
+        <ContainerCartao style={{ cursor: 'pointer' }}>
+            <IconeCurtir>♡</IconeCurtir>
+            <ImagemProduto src={imagem} alt={titulo} />
+            <TituloProduto>{titulo}</TituloProduto>
+            <DetalhesProduto>{distancia} • {tempoEntrega}</DetalhesProduto>
+            <ContainerPreco>
+                <Preco>R$ {preco}</Preco>
+            {mostrarRestCheffKiss && (
+                <BotaoCarrinho1 onClick={navegarParaRestaurante}>Ver Restaurante</BotaoCarrinho1>
+            )}
+            {mostrarBotao && (
+                <BotaoCarrinho>Ver Restaurante</BotaoCarrinho>
+            )}
+            </ContainerPreco>
+        </ContainerCartao>
+    );
+    ;
 
     return (
         <ContainerPagina>
@@ -342,23 +365,23 @@ const Pedido = () => {
             <Carrossel />
             <TituloSecao id='populares'>Populares</TituloSecao>
             <ContainerSecao>
-                <CartaoProduto titulo="Hambúrguer Padrão" preco="25,90" distancia="1.2 km" tempoEntrega="15 min" imagem={imgComida1} />
-                <CartaoProduto titulo="Pizza" preco="39,90" distancia="2.5 km" tempoEntrega="25 min" imagem={imgComida2} />
-                <CartaoProduto titulo="Sanduiche" preco="29,90" distancia="1.8 km" tempoEntrega="20 min" imagem={imgComida3} />
-                <CartaoProduto titulo="Batata frita " preco="4,90" distancia="3.2 km" tempoEntrega="10 min" imagem={imgComida4} />
+                <CartaoProduto titulo="Hambúrguer Padrão" preco="25,90" distancia="1.2 km" tempoEntrega="15 min" imagem={imgComida1}  mostrarBotao/>
+                <CartaoProduto titulo="Pizza" preco="39,90" distancia="2.5 km" tempoEntrega="25 min" imagem={imgComida2} mostrarBotao />
+                <CartaoProduto titulo="Sanduiche" preco="29,90" distancia="1.8 km" tempoEntrega="20 min" imagem={imgComida3} mostrarBotao />
+                <CartaoProduto titulo="Batata frita " preco="4,90" distancia="3.2 km" tempoEntrega="10 min" imagem={imgComida4} mostrarBotao />
             </ContainerSecao>
 
             <TituloSecao id='promocao'>Promoções</TituloSecao>
             <ContainerSecao>
-                <CartaoProduto titulo="Pizza Família" preco="59,90" distancia="2.0 km" tempoEntrega="30 min" imagem={imgPromocao1} />
+                <CartaoProduto titulo="Pizza Família" preco="59,90" distancia="2.0 km" tempoEntrega="30 min" imagem={imgPromocao1} mostrarBotao />
             </ContainerSecao>
 
             <TituloSecao id='restaurantes'>Restaurantes</TituloSecao>
             <ContainerSecao>
-                <CartaoProduto titulo="Tal burguer" preco="Variado" distancia="1.2 km" tempoEntrega="20 min" imagem={imgRestaurante1} />
-                <CartaoProduto titulo="La pasta" preco="Variado" distancia="2.0 km" tempoEntrega="30 min" imagem={imgRestaurante2} />
-                <CartaoProduto titulo="Naturals" preco="Variado" distancia="3.0 km" tempoEntrega="25 min" imagem={imgRestaurante3} />
-                <CartaoProduto titulo="Chef kiss" preco="Variado" distancia="1.5 km" tempoEntrega="15 min" imagem={imgRestaurante4} />
+                <CartaoProduto titulo="Tal burguer" preco="Variado" distancia="1.2 km" tempoEntrega="20 min" imagem={imgRestaurante1} mostrarBotao />
+                <CartaoProduto titulo="La pasta" preco="Variado" distancia="2.0 km" tempoEntrega="30 min" imagem={imgRestaurante2}  mostrarBotao/>
+                <CartaoProduto titulo="Naturals" preco="Variado" distancia="3.0 km" tempoEntrega="25 min" imagem={imgRestaurante3} mostrarBotao/>
+                <CartaoProduto titulo="Chef kiss" preco="Variado" distancia="1.5 km" tempoEntrega="15 min" imagem={imgRestaurante4} mostrarRestCheffKiss/>
             </ContainerSecao>
         </ContainerPagina>
     );

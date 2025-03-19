@@ -399,7 +399,7 @@ const App = () => {
   };
   return (
     <MainContainer>
-
+ 
       <ContainerNavbar>
         <Logo>
           <TextoLogo>Maricá</TextoLogo>

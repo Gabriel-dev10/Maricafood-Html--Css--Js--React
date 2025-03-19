@@ -9,6 +9,7 @@ import User from './routes/user';
 import Login from './routes/login';
 import Cadastro  from './routes/cadastro';
 import Carrinho from './routes/carrinho';
+import Restaurante from './routes/restaurante';
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
   {
     path: 'carrinho',
     element: <Carrinho />
+  },
+  {
+    path: 'restaurante',
+    element: <Restaurante/>
   }
 ]);
 
