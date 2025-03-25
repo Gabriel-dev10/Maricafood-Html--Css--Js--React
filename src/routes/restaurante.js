@@ -460,7 +460,7 @@ const Pedido = () => {
                 <CartaoProduto titulo="Refrigerantes" tempoEntrega="Adicione ao carrinho para escolher" preco="Variado" imagem={imgRestaurante1} />
                 <CartaoProduto titulo="Whisky" tempoEntrega="Adicione ao carrinho para escolher" preco="Variado"   imagem={imgRestaurante2} />
                 <CartaoProduto titulo="Cerveja"tempoEntrega="Adicione ao carrinho para escolher" preco="Variado"   imagem={imgRestaurante3} />
-                <CartaoProduto titulo="Chef kiss" tempoEntrega="Adicione ao carrinho para escolher" preco="Variado"  imagem={imgRestaurante4} />
+                <CartaoProduto titulo="Vinho" tempoEntrega="Adicione ao carrinho para escolher" preco="Variado"  imagem={imgRestaurante4} />
             </ContainerSecao>
         </ContainerPagina>
     );
