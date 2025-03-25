@@ -426,7 +426,7 @@ const Pedido = () => {
                 <RestauranteInfo>
                     <Logorest src={imgperfil} alt="Logo" />
                     <div>
-                        <Nome>Restaurante JOÃO & JOÃO</Nome>
+                        <Nome>Restaurante Chefs Kiss</Nome>
                         <Avaliacao><FaStar /> 5 </Avaliacao>
                         <PedidoMinimo>Seja feliz, comendo nossa comida.</PedidoMinimo>
                     </div>
